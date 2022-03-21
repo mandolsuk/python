@@ -7,5 +7,9 @@ Created on Mon Mar 21 20:13:44 2022
 
 import pandas as pd
 
-# 인덱스를 지정해 시트 설정
-df_sheet_index = pd.read_excel('C:/Users/Administrator/Desktop/python/excel/excel_sample.xlsx', sheet_name=1)
+filePath = 'D:\workspace\exelFiles\메뉴별_매출현황(20220301)_20220321193029.xlsx'
+
+#dataset2 = pd.read_excel(filePath)
+df = pd.read_excel(filePath, skiprows=[0,1], index_col = '메뉴코드')
+
+df_dic = df.to_dict('index')
