@@ -54,4 +54,5 @@ for i in range(len(file_list)):
             
 
 total_df = pd.DataFrame(total_dic)
+total_df = total_df.transpose()
 total_df.to_excel("output.xlsx")
